@@ -1,3 +1,6 @@
+# Copyright (c) serpro69
+# SPDX-License-Identifier: MIT
+
 ---
 # Valid YAML with various scalar types
 string_plain: This is a plain string

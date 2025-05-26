@@ -1,3 +1,6 @@
+// Copyright (c) serpro69
+// SPDX-License-Identifier: MIT
+
 package provider_test
 
 import (
