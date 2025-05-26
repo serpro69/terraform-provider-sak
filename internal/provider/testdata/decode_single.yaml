@@ -1,0 +1,45 @@
+---
+# Valid YAML with various scalar types
+string_plain: This is a plain string
+string_single_quoted: 'This string contains special characters like : or #'
+string_double_quoted: "This string can have \n newlines and \t tabs."
+string_block_literal: |
+  This is a literal block scalar.
+  Newlines are preserved.
+  Indentation matters here.
+string_block_folded: >
+  This is a folded block scalar.
+  Newlines are typically folded into spaces,
+  but an empty line creates a paragraph break.
+
+  Like this.
+null_value: null
+empty_value:
+boolean_true: true
+boolean_false: false
+integer_decimal: 12345
+integer_octal: 0o77 # Octal for 63
+integer_hexadecimal: 0xFF # Hexadecimal for 255
+float_fixed: 2.5
+float_exponential: 6.022e+8
+timestamp_iso8601: 2023-10-26T14:30:00Z
+timestamp_space_separated: 2023-10-26 14:30:00 -05:00
+timestamp_canonical: 2001-12-15T02:59:43.1Z
+# YAML 1.1 style date, some parsers might treat as string in YAML 1.2
+date_simple: 2023-10-26
+binary_data: !!binary |-
+  aGVsbG8sIHdvcmxk
+map:
+  string: a string
+  int: 42
+  submap:
+    another_string: "another string"
+array:
+  - item1
+  - item2
+  - item3
+array_with_map:
+  - key: key1
+    value: 1
+  - key: key2
+    value: 2

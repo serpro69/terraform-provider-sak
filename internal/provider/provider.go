@@ -65,5 +65,6 @@ func (p *SakProvider) Resources(_ context.Context) []func() resource.Resource {
 func (p *SakProvider) Functions(_ context.Context) []func() function.Function {
 	return []func() function.Function{
 		NewRFC3339ParseFunction,
+		NewYamlDecodeFunction,
 	}
 }

@@ -1,9 +1,10 @@
 // Copyright (c) serpro69
 // SPDX-License-Identifier: MIT
 
-package provider
+package provider_test
 
 import (
+	"terraform-provider-sak/internal/provider"
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
@@ -15,7 +16,7 @@ import (
 // The factory function is called for each Terraform CLI command to create a provider
 // server that the CLI can connect to and interact with.
 var testAccProtoV6ProviderFactories = map[string]func() (tfprotov6.ProviderServer, error){
-	"sak": providerserver.NewProtocol6WithError(New("test")()),
+	"sak": providerserver.NewProtocol6WithError(provider.New("test")()),
 }
 
 // testAccProtoV6ProviderFactoriesWithEcho includes the echo provider alongside the scaffolding provider.
@@ -23,8 +24,8 @@ var testAccProtoV6ProviderFactories = map[string]func() (tfprotov6.ProviderServe
 // The echoprovider is used to arrange tests by echoing ephemeral data into the Terraform state.
 // This lets the data be referenced in test assertions with state checks.
 var testAccProtoV6ProviderFactoriesWithEcho = map[string]func() (tfprotov6.ProviderServer, error){
-	"sak": providerserver.NewProtocol6WithError(New("test")()),
-	"echo":        echoprovider.NewProviderServer(),
+	"sak":  providerserver.NewProtocol6WithError(provider.New("test")()),
+	"echo": echoprovider.NewProviderServer(),
 }
 
 func testAccPreCheck(t *testing.T) {
