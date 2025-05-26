@@ -1,0 +1,22 @@
+# Copyright (c) serpro69
+# SPDX-License-Identifier: MIT
+
+---
+name: "Test Product"
+version: 1.0
+details:
+  description: "A sample product description
+  # Missing closing quote here
+  price: 25.99
+  tags:
+    - "electronics"
+    - "gadget
+    # Missing closing quote here too
+  attributes:
+    color: "black"
+    weight: "250g
+    # And another missing quote
+    dimensions:
+      height: 10cm # No space after colon, or invalid unit without quotes
+      width: 5 cm
+      depth: 2cm
