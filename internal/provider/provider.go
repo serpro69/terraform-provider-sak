@@ -64,7 +64,6 @@ func (p *SakProvider) Resources(_ context.Context) []func() resource.Resource {
 // Functions defines the functions implemented in the provider.
 func (p *SakProvider) Functions(_ context.Context) []func() function.Function {
 	return []func() function.Function{
-		NewRFC3339ParseFunction,
 		NewYamlDecodeFunction,
 	}
 }
