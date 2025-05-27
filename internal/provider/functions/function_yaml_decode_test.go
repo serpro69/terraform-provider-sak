@@ -1,7 +1,7 @@
 // Copyright (c) serpro69
 // SPDX-License-Identifier: MIT
 
-package provider_test
+package functions_test
 
 import (
 	"fmt"

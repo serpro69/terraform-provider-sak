@@ -6,6 +6,8 @@ package provider
 import (
 	"context"
 
+	pfun "github.com/serpro69/terraform-provider-sak/internal/provider/functions"
+
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/function"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
@@ -64,6 +66,6 @@ func (p *SakProvider) Resources(_ context.Context) []func() resource.Resource {
 // Functions defines the functions implemented in the provider.
 func (p *SakProvider) Functions(_ context.Context) []func() function.Function {
 	return []func() function.Function{
-		NewYamlDecodeFunction,
+		pfun.NewYamlDecodeFunction,
 	}
 }

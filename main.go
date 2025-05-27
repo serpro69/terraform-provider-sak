@@ -7,7 +7,8 @@ import (
 	"context"
 	"flag"
 	"log"
-	"terraform-provider-sak/internal/provider"
+
+	"github.com/serpro69/terraform-provider-sak/internal/provider"
 
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
 )
