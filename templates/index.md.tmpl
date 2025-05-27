@@ -5,6 +5,12 @@ description: |-
   The SAK provider can be used to improve development experience when working with terraform and provides useful extensions for managing your infrastructure with terraform.
 ---
 
+{{/* This template serves as a starting point for documentation generation, 
+and can be customized with hardcoded values and/or doc gen templates.
+
+For example, the {{ .SchemaMarkdown }} template can be used to replace manual schema documentation 
+if descriptions of schema attributes are added in the provider source code. */ -}}
+
 # SAK Provider
 
 This SAK (Swiss Army Knife) provider aims to enhance the Terraform development experience by offering a collection of utilities and helpers. 
@@ -12,14 +18,4 @@ Currently it is a function-only provider and does not contain any managed resour
 
 ## Example Usage
 
-```terraform
-terraform {
-  required_providers {
-    sak = {
-      source = "serpro69/sak"
-    }
-  }
-}
-
-provider "sak" {}
-```
+{{tffile "examples/provider/provider.tf"}}
